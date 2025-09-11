@@ -149,9 +149,127 @@
   </section>
 
   <!-- Footer -->
-  <footer class="section-dark text-gray-400 py-6 text-center border-t border-gray-700">
-    <p>&copy; 2025 Sean Dayap. All Rights Reserved.</p>
-  </footer>
+<footer>
+  <!-- Social Media Icons Left -->
+  <div class="social-icons">
+    <a href="https://www.facebook.com/seanawen.dayap" target="_blank" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/in/seandayap-adminsupport" target="_blank" class="linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.instagram.com/shan_the_lier" target="_blank" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.threads.net/@shan_the_lier" target="_blank" class="threads" title="Threads"><i class="fab fa-discourse"></i></a>
+  </div>
+
+  <!-- Copyright Center -->
+  <div class="copyright">
+    &copy; 2025 Sean Dayap. All Rights Reserved.
+  </div>
+
+  <!-- Contact Details Right -->
+  <div class="contact">
+    <div><i class="fab fa-whatsapp"></i> +639083802005</div>
+    <div><i class="fas fa-envelope"></i> seandayap8@gmail.com</div>
+  </div>
+</footer>
+
+<!-- Footer CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<style>
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 4px 30px; /* slightly slimmer */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  /* Fixed at bottom */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.social-icons a {
+  margin-right: 25px; /* spacing between social icons */
+  font-size: 18px;    /* slightly smaller */
+  transition: transform 0.2s;
+}
+
+/* Social icon colors */
+.social-icons a.facebook { color: #1877F2; }
+.social-icons a.linkedin { color: #0077B5; }
+.social-icons a.instagram { color: #E4405F; }
+.social-icons a.threads { color: #000000; }
+
+.social-icons a:hover { transform: scale(1.2); }
+
+.contact {
+  display: flex;
+  gap: 20px; /* spacing between WhatsApp & Email */
+  font-size: 14px;
+}
+
+.contact div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact div i {
+  font-size: 16px; /* smaller icon size for WhatsApp & Email */
+}
+
+.copyright {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+  }
+  .social-icons {
+    margin-bottom: 10px;
+  }
+  .contact {
+    justify-content: center;
+  }
+  .copyright {
+    position: static;
+    transform: none;
+    margin: 10px 0;
+  }
+}
+
+
+
+/* Prevent content being hidden behind fixed footer */
+main {
+  padding-bottom: 60px; /* adjust according to footer height */
+}
+</style>
 
   <script>
     AOS.init({
