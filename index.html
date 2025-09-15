@@ -300,39 +300,83 @@ footer {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+ footer {
+  background-color: #222;
+  color: #fff;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+
+  /* Fixed at bottom */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  height: 40px; /* force smaller height */
+}
+
+.social-icons a {
+  margin-right: 6px;
+  font-size: 13px;
+  transition: transform 0.2s;
+}
+
+/* Social icon colors */
+.social-icons a.facebook { color: #1877F2; }
+.social-icons a.linkedin { color: #0077B5; }
+.social-icons a.instagram { color: #E4405F; }
+.social-icons a.threads { color: #000000; }
+
+.social-icons a:hover { transform: scale(1.15); }
+
+.contact {
+  display: flex;
+  gap: 10px;
+  font-size: 11px;
+}
+
+.contact div i {
+  font-size: 11px;
+}
+
+.copyright {
+  font-size: 10px;
+  color: #ccc;
+  white-space: nowrap;
+  margin: 0 10px;
+}
+
+/* 📱 Mobile view: shrink footer */
+@media (max-width: 768px) {
   footer {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 8px;
-    padding: 8px; /* tighter padding for small screens */
+    justify-content: center;
+    padding: 4px 6px;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* allow horizontal scroll if needed */
   }
+
   .social-icons {
-    margin-bottom: 4px;
+    display: none; /* hide icons on mobile for space */
   }
+
   .contact {
-    flex-direction: column; /* stack vertically */
-    gap: 4px;
-    font-size: 11px;
+    font-size: 10px;
+    gap: 6px;
   }
+
   .copyright {
-    position: static;
-    transform: none;
     font-size: 9px;
-    margin: 4px 0;
   }
 }
 
-/* Prevent content being hidden behind fixed footer */
+/* Prevent content hidden behind footer */
 main {
-  padding-bottom: 40px; /* match footer height */
-}
-
-
-
-/* Prevent content being hidden behind fixed footer */
-main {
-  padding-bottom: 1px; /* adjust according to footer height */
+  padding-bottom: 50px; /* adjust for new footer height */
 }
 </style>
 
